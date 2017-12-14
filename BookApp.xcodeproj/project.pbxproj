@@ -17,7 +17,6 @@
 		CB2DE73E1FD5D36900D435BC /* BookAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2DE73D1FD5D36900D435BC /* BookAppTests.swift */; };
 		CB2DE7491FD5D36A00D435BC /* BookAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2DE7481FD5D36A00D435BC /* BookAppUITests.swift */; };
 		CB2DE7571FD5DA3E00D435BC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2DE7561FD5DA3E00D435BC /* Constants.swift */; };
-		CB2DE7591FD5DDD400D435BC /* BookDataDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2DE7581FD5DDD400D435BC /* BookDataDetail.swift */; };
 		CB9384131FDC97EC00353BBA /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9384121FDC97EC00353BBA /* SearchView.swift */; };
 		CB9384151FDCA85C00353BBA /* BookDataSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9384141FDCA85C00353BBA /* BookDataSearch.swift */; };
 		CB9384171FDF354300353BBA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB9384161FDF354300353BBA /* TableViewCell.swift */; };
@@ -59,7 +58,6 @@
 		CB2DE7481FD5D36A00D435BC /* BookAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookAppUITests.swift; sourceTree = "<group>"; };
 		CB2DE74A1FD5D36A00D435BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB2DE7561FD5DA3E00D435BC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		CB2DE7581FD5DDD400D435BC /* BookDataDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataDetail.swift; sourceTree = "<group>"; };
 		CB9384121FDC97EC00353BBA /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		CB9384141FDCA85C00353BBA /* BookDataSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDataSearch.swift; sourceTree = "<group>"; };
 		CB9384161FDF354300353BBA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -142,7 +140,6 @@
 				CB2DE7311FD5D36900D435BC /* LaunchScreen.storyboard */,
 				CB2DE7341FD5D36900D435BC /* Info.plist */,
 				CB2DE7561FD5DA3E00D435BC /* Constants.swift */,
-				CB2DE7581FD5DDD400D435BC /* BookDataDetail.swift */,
 				CB9384141FDCA85C00353BBA /* BookDataSearch.swift */,
 				CB1B54D51FE3191100E813FB /* GoogleService-Info.plist */,
 			);
@@ -342,12 +339,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BookApp/Pods-BookApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -366,7 +365,6 @@
 				CB9384131FDC97EC00353BBA /* SearchView.swift in Sources */,
 				CB2DE72B1FD5D36900D435BC /* DetailView.swift in Sources */,
 				CB2DE7291FD5D36900D435BC /* AppDelegate.swift in Sources */,
-				CB2DE7591FD5DDD400D435BC /* BookDataDetail.swift in Sources */,
 				CB9384151FDCA85C00353BBA /* BookDataSearch.swift in Sources */,
 				CB9384171FDF354300353BBA /* TableViewCell.swift in Sources */,
 				CB2DE7571FD5DA3E00D435BC /* Constants.swift in Sources */,

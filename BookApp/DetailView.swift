@@ -11,7 +11,6 @@ import UIKit
 
 class DetailView: UIViewController {
     
-    
     @IBOutlet weak var coverImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
