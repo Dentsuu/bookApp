@@ -4,4 +4,5 @@ use_frameworks!
 
 target 'BookApp' do
     pod 'Alamofire', '~> 4.5'
+    pod 'Firebase/Core'
 end
