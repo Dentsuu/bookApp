@@ -16,31 +16,38 @@
             <objects>
                 <viewController id="Agn-O5-E7K" customClass="CreateAccountVC" customModule="BookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SCY-2L-3K1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvw-W6-XCF" customClass="createBtn">
-                                <rect key="frame" x="164" y="488" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvw-W6-XCF">
+                                <rect key="frame" x="164" y="337" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createNewUser:" destination="Agn-O5-E7K" eventType="touchUpInside" id="b9l-ru-bTm"/>
+                                    <segue destination="ZZe-2s-gz7" kind="showDetail" identifier="createdUser" id="dPX-Vx-JXC"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="46n-kS-jeS">
-                                <rect key="frame" x="92" y="270" width="191" height="30"/>
+                                <rect key="frame" x="92" y="119" width="191" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.71768340809999998" green="0.7613766703" blue="0.86645650590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a5S-Xs-pUy">
-                                <rect key="frame" x="92" y="336" width="191" height="30"/>
+                                <rect key="frame" x="92" y="185" width="191" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.71768340809999998" green="0.7613766703" blue="0.86645650590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ykd-oS-yqR">
-                                <rect key="frame" x="92" y="398" width="191" height="30"/>
+                                <rect key="frame" x="92" y="247" width="191" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.71768340809999998" green="0.7613766703" blue="0.86645650590000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -51,6 +58,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Bfx-eM-rc3"/>
                     <connections>
+                        <outlet property="createBtn" destination="Fvw-W6-XCF" id="CYY-Kb-Rgd"/>
                         <outlet property="emailInput" destination="a5S-Xs-pUy" id="wXe-rJ-hZK"/>
                         <outlet property="passwordInput" destination="Ykd-oS-yqR" id="Rl4-ul-nz0"/>
                         <outlet property="usernameInput" destination="46n-kS-jeS" id="khs-jd-r6H"/>
@@ -58,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Zp-zU-rpv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1658" y="484"/>
+            <point key="canvasLocation" x="-1642" y="52"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="l97-ZP-aCJ">
@@ -77,7 +85,7 @@
                         </textAttributes>
                     </navigationBar>
                     <connections>
-                        <segue destination="ZZe-2s-gz7" kind="relationship" relationship="rootViewController" id="xdQ-Es-0Na"/>
+                        <segue destination="Agn-O5-E7K" kind="relationship" relationship="rootViewController" id="wGJ-85-l4b"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NFj-8K-o1q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,11 +97,11 @@
             <objects>
                 <viewController id="ZZe-2s-gz7" userLabel="SearchVC" customClass="SearchVC" customModule="BookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aCX-vE-JBO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u9w-JO-C4y">
-                                <rect key="frame" x="0.0" y="56" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="76" width="375" height="591"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.20119422674179077" green="0.21395644545555115" blue="0.41584703326225281" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -138,7 +146,7 @@
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Find books" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wxE-uQ-YI4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
                                 <color key="backgroundColor" red="0.13398578759999999" green="0.1429707408" blue="0.30328622459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="barTintColor" red="0.13398578759999999" green="0.1429707408" blue="0.30328622459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -174,11 +182,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DetailView" customModule="BookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cML-8b-sKL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="1136"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="1180"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vJm-FM-gFa">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
