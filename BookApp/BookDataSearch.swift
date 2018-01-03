@@ -84,14 +84,17 @@ class BookDataSearch {
                     for item in searchItems {
                         if let volumeInfo = item["volumeInfo"] as? Dictionary<String, AnyObject> {
                             if let title = volumeInfo["title"] as? String, let subtitle = volumeInfo["subtitle"] as? String, let author = volumeInfo["authors"] as? [String], let description = volumeInfo["description"] as? String, let pageCount = volumeInfo["pageCount"] as? Int, let thumb = volumeInfo["imageLinks"] as? [String: AnyObject] {
-                                if let thumbnail = thumb["smallThumbnail"] as? String {
+                                if let thumbnail = thumb["thumbnail"] as? String {
                                     let book = BookDataSearch()
                                     book._title = title
                                     book._subtitle = subtitle
                                     book._author = author[0]
                                     book._description = description.replacingOccurrences(of: "<[^>]+>", with: "", options: .regularExpression, range: nil)
                                     book._pageCount = pageCount
-                                    book._thumbnail = thumbnail.replacingOccurrences(of: "&edge=curl", with: "", options: .regularExpression, range: nil)
+                                    
+                                    let small_thumb = thumbnail.replacingOccurrences(of: "&edge=curl", with: "", options: .regularExpression, range: nil)
+                                    book._thumbnail = small_thumb.replacingOccurrences(of: "&zoom=1", with: "&zoom=8", options: .regularExpression, range: nil)
+                                    
                                     books.append(book)
                                 }
                             }

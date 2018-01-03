@@ -17,9 +17,7 @@ class CreateAccountVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var createBtn: UIButton!
     
     @IBAction func createNewUser(_ sender: UIButton) {
-        
         userCreate()
-        
     }
     
     override func viewDidLoad() {
@@ -31,6 +29,7 @@ class CreateAccountVC: UIViewController, UITextFieldDelegate {
         
     }
     
+    // ** Trigger through inputs
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         switch textField {
@@ -72,7 +71,8 @@ class CreateAccountVC: UIViewController, UITextFieldDelegate {
                     }
                 }
                 
-                self.performSegue(withIdentifier: "createdUser", sender: self)
+                // ** IN MED PREPARE FOR SEGUE + TA BORT IBACTION
+                self.dismiss(animated: true, completion: nil)
                 
             } else {
                 print("Error creating user")

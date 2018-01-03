@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		59C0F59FA30DECBB7EE91857 /* Pods_BookApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0A1DA3713B7410360BA1E8 /* Pods_BookApp.framework */; };
+		CB1881021FFC3B0600C345C1 /* LibreFranklin-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB1880FE1FFC3ABB00C345C1 /* LibreFranklin-Bold.ttf */; };
+		CB1881031FFC3B0600C345C1 /* LibreFranklin-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB1881001FFC3ABC00C345C1 /* LibreFranklin-Medium.ttf */; };
+		CB1881041FFC3B0600C345C1 /* LibreFranklin-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CB1880FF1FFC3ABC00C345C1 /* LibreFranklin-Regular.ttf */; };
 		CB1B54D61FE3191100E813FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB1B54D51FE3191100E813FB /* GoogleService-Info.plist */; };
 		CB1B54D81FE3291300E813FB /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1B54D71FE3291300E813FB /* CreateAccount.swift */; };
 		CB2DE7291FD5D36900D435BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2DE7281FD5D36900D435BC /* AppDelegate.swift */; };
@@ -44,6 +47,9 @@
 		0448C7AD15B2FEB93AE7F523 /* Pods-BookApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BookApp/Pods-BookApp.debug.xcconfig"; sourceTree = "<group>"; };
 		9B24EAE92E7A11AA663E87A7 /* Pods-BookApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BookApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BookApp/Pods-BookApp.release.xcconfig"; sourceTree = "<group>"; };
 		BD0A1DA3713B7410360BA1E8 /* Pods_BookApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BookApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB1880FE1FFC3ABB00C345C1 /* LibreFranklin-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-Bold.ttf"; sourceTree = "<group>"; };
+		CB1880FF1FFC3ABC00C345C1 /* LibreFranklin-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-Regular.ttf"; sourceTree = "<group>"; };
+		CB1881001FFC3ABC00C345C1 /* LibreFranklin-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LibreFranklin-Medium.ttf"; sourceTree = "<group>"; };
 		CB1B54D51FE3191100E813FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CB1B54D71FE3291300E813FB /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		CB2DE7251FD5D36900D435BC /* BookApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +114,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CB1881011FFC3AC900C345C1 /* Typeface */ = {
+			isa = PBXGroup;
+			children = (
+				CB1880FE1FFC3ABB00C345C1 /* LibreFranklin-Bold.ttf */,
+				CB1881001FFC3ABC00C345C1 /* LibreFranklin-Medium.ttf */,
+				CB1880FF1FFC3ABC00C345C1 /* LibreFranklin-Regular.ttf */,
+			);
+			path = Typeface;
+			sourceTree = "<group>";
+		};
 		CB2DE71C1FD5D36900D435BC = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +149,7 @@
 		CB2DE7271FD5D36900D435BC /* BookApp */ = {
 			isa = PBXGroup;
 			children = (
+				CB1881011FFC3AC900C345C1 /* Typeface */,
 				CB2DE7281FD5D36900D435BC /* AppDelegate.swift */,
 				CB1B54D71FE3291300E813FB /* CreateAccount.swift */,
 				CB9384121FDC97EC00353BBA /* SearchView.swift */,
@@ -277,6 +294,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB1881021FFC3B0600C345C1 /* LibreFranklin-Bold.ttf in Resources */,
+				CB1881031FFC3B0600C345C1 /* LibreFranklin-Medium.ttf in Resources */,
+				CB1881041FFC3B0600C345C1 /* LibreFranklin-Regular.ttf in Resources */,
 				CB2DE7331FD5D36900D435BC /* LaunchScreen.storyboard in Resources */,
 				CB1B54D61FE3191100E813FB /* GoogleService-Info.plist in Resources */,
 				CB2DE7301FD5D36900D435BC /* Assets.xcassets in Resources */,

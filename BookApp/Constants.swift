@@ -14,6 +14,7 @@ let BOOK_ID = "ZrsVZKWJg4UC"
 let SEARCH_BASE_URL = "https://www.googleapis.com/books/v1/volumes?q="
 let SEARCH_GET_COUNT = "&maxResults=40"
 let SEARCH_ORDER_BY = "&orderBy=relevance"
+let SEARCH_THUMB_SIZE = "&zoom=8"
 
 typealias DownloadComplete = () -> ()
 

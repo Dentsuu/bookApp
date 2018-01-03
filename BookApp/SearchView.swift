@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Firebase
 
 class SearchVC: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-        
+    @IBOutlet weak var logoutBtn: UIBarButtonItem!
+    
+    @IBAction func logoutUser(_ sender: Any) {
+    }
+    
     private var books: [BookDataSearch]?
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -33,6 +38,7 @@ class SearchVC: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITa
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.setHidesBackButton(true, animated:true)
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -41,7 +47,7 @@ class SearchVC: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITa
         self.tableView.rowHeight = 140.0
         
         //SearchBar
-        searchBar.backgroundColor = UIColor(red: 31/255, green: 33/255, blue: 68/255, alpha: 1)
+        //searchBar.backgroundColor = UIColor(red: 31/255, green: 33/255, blue: 68/255, alpha: 1)
         
         
     }
