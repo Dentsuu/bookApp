@@ -11,8 +11,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="LibreFranklin-Medium.ttf">
-            <string>LibreFranklin-Medium</string>
+        <array key="LibreFranklin-Bold.ttf">
+            <string>LibreFranklin-Bold</string>
+        </array>
+        <array key="LibreFranklin-Regular.ttf">
+            <string>LibreFranklin-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -102,10 +105,12 @@
             <objects>
                 <tabBarController id="qho-dO-sss" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="FUo-8V-fhz"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="azb-H9-ehe">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="azb-H9-ehe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" cocoaTouchSystemColor="darkTextColor"/>
                     </tabBar>
                     <connections>
                         <segue destination="nld-bc-SJo" kind="relationship" relationship="viewControllers" id="ni7-Et-6Tu"/>
@@ -123,7 +128,7 @@
             <objects>
                 <viewController id="rRq-Jb-ycp" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PGR-B7-OyP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="user" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6y-sX-rgc">
@@ -148,7 +153,7 @@
             <objects>
                 <viewController id="i2o-Yp-f9d" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="weH-nc-wT2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Circles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bnc-nx-gAh">
@@ -173,7 +178,7 @@
             <objects>
                 <viewController id="nld-bc-SJo" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bms-lY-DQf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yzB-qM-ypH">
@@ -198,10 +203,10 @@
             <objects>
                 <viewController id="ZZe-2s-gz7" userLabel="SearchVC" customClass="SearchVC" customModule="BookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aCX-vE-JBO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Find Books" translatesAutoresizingMaskIntoConstraints="NO" id="wxE-uQ-YI4">
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search title or author" translatesAutoresizingMaskIntoConstraints="NO" id="wxE-uQ-YI4">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                 <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -214,37 +219,45 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="bookCell" rowHeight="140" id="zja-Rd-BXz" customClass="TableViewCell" customModule="BookApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="140"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="bookCell" rowHeight="220" id="zja-Rd-BXz" customClass="TableViewCell" customModule="BookApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="220"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zja-Rd-BXz" id="nk9-4v-WHf">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="219.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Harry Potter and the book title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WlY-MC-FDD">
-                                                    <rect key="frame" x="112" y="45" width="237" height="21"/>
+                                                    <rect key="frame" x="135" y="69" width="212" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" name="LibreFranklin-Medium" family="Libre Franklin" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <fontDescription key="fontDescription" name="LibreFranklin-Bold" family="Libre Franklin" pointSize="17"/>
+                                                    <color key="textColor" red="0.13398578759999999" green="0.1429707408" blue="0.30328622459999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="JK Rowling" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55e-Wk-McW">
-                                                    <rect key="frame" x="112" y="72" width="250" height="21"/>
+                                                    <rect key="frame" x="135" y="150" width="250" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.71768340805695563" green="0.76137667032010203" blue="0.86645650591341972" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mrE-s4-3Ca">
-                                                    <rect key="frame" x="19" y="22" width="67" height="94"/>
+                                                    <rect key="frame" x="20" y="36" width="96" height="144"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" red="0.8897128807106599" green="0.86349474722096964" blue="0.86587354549248763" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="A subtitle to the book" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QyI-pL-WH0">
+                                                    <rect key="frame" x="135" y="99" width="165" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="LibreFranklin-Regular" family="Libre Franklin" pointSize="15"/>
+                                                    <color key="textColor" red="0.56283708756345185" green="0.56283708756345185" blue="0.56283708756345185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="authorLabel" destination="55e-Wk-McW" id="npc-GB-mLj"/>
                                             <outlet property="coverImage" destination="mrE-s4-3Ca" id="nLH-9K-vHZ"/>
+                                            <outlet property="subtitleLabel" destination="QyI-pL-WH0" id="ZzS-a9-h6k"/>
                                             <outlet property="titleLabel" destination="WlY-MC-FDD" id="872-42-Cvz"/>
                                             <segue destination="BYZ-38-t0r" kind="push" id="PFf-j1-hJt"/>
                                         </connections>
@@ -265,29 +278,22 @@
                         <viewLayoutGuide key="safeArea" id="BCV-Qx-sIw"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="LRd-uE-Rhl"/>
-                    <navigationItem key="navigationItem" title="Find Adventure" id="3U1-2Z-acT">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" id="L3c-ba-eX8">
-                            <connections>
-                                <action selector="logoutUser:" destination="ZZe-2s-gz7" id="VYw-Wg-cD9"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Find Books" id="3U1-2Z-acT"/>
                     <connections>
-                        <outlet property="logoutBtn" destination="L3c-ba-eX8" id="TiY-eN-xsx"/>
                         <outlet property="searchBar" destination="wxE-uQ-YI4" id="6Jc-JW-xL9"/>
                         <outlet property="tableView" destination="u9w-JO-C4y" id="0N7-3q-KGT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ptc-KM-5ze" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="-107"/>
+            <point key="canvasLocation" x="-7.2000000000000002" y="-107.49625187406298"/>
         </scene>
         <!--Detail View-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DetailView" customModule="BookApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1136"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1087"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cML-8b-sKL">

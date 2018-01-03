@@ -44,10 +44,11 @@ class SearchVC: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITa
         tableView.dataSource = self
         
     //Styling
-        self.tableView.rowHeight = 140.0
+        self.tableView.rowHeight = 220.0
         
         //SearchBar
         //searchBar.backgroundColor = UIColor(red: 31/255, green: 33/255, blue: 68/255, alpha: 1)
+        
         
         
     }
@@ -74,6 +75,7 @@ class SearchVC: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITa
         let cell = tableView.dequeueReusableCell(withIdentifier: "bookCell") as! TableViewCell
         let currentBook = books![indexPath.row]
         cell.titleLabel.text = currentBook.title
+        cell.subtitleLabel.text = currentBook.subtitle
         cell.authorLabel.text = "By \(currentBook.author)"
         
         let task = URLSession.shared.dataTask(with: URL(string: currentBook.thumbnail)!) { (imageData, _, _) in
@@ -89,7 +91,15 @@ class SearchVC: UIViewController, UISearchBarDelegate, UITableViewDelegate, UITa
         task.resume()
         
         cell.coverImage.layer.cornerRadius = 4
+        // ** Set to false to get shadows working
         cell.coverImage.layer.masksToBounds = true
+        cell.coverImage.layer.shadowColor = UIColor.black.cgColor
+        cell.coverImage.layer.shadowOpacity = 0.3
+        cell.coverImage.layer.shadowOffset = CGSize(width: 1, height: 2)
+        cell.coverImage.layer.shadowRadius = 4
+        
+        cell.coverImage.layer.shouldRasterize = true
+        cell.coverImage.layer.rasterizationScale = UIScreen.main.scale
         
         return cell
     }
